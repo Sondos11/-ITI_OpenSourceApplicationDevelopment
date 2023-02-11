@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AVG & SUM</title>
+
+<script>
+var contacts = [{name:"mrwan",phone:"111"},{name:"sondos",phone:"222"},{name:"sara",phone:"333"}];
+
+function addNewContact(){
+    var newContact = {};
+    newContact.name = prompt("enter contact's name");
+    newContact.phone = prompt("enter contact's phone");
+    contacts.push(newContact);
+    }
+
+function searchForContact(){
+    var searchKeyword = prompt("enter name or phone")
+    for(var i =0;i<contacts.length;i++){
+        var currentContact = contacts[i];
+        if(searchKeyword == currentContact.name || searchKeyword == currentContact.phone){
+            alert("contact's name is: "+currentContact.name +" ,"+" contact's number is: "+currentContact.phone);
+            break;
+        }
+    }
+}
+
+function runPhoneBook(){
+    var stop = false;
+    do{
+        var op = prompt("what do you want? \n for add enter 1 // for search enter 2 // for exit enter 0");
+        switch(op){
+            case "1":
+                addNewContact();
+            break;
+            case "2":
+                searchForContact();
+
+            break;
+            case "0":
+                stop = true;
+            break;
+
+        }
+    }while(!stop)
+}
+
+runPhoneBook();
+
+</script>
+</body>
+</html>

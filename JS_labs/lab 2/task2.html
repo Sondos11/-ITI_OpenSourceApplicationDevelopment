@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+  
+    <script>
+        
+        function countVowel(str) {
+            let count=0;
+            var string = str.toString();
+            for (var i = 0; i <= string.length - 1; i++) {
+                if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u"
+                || string.charAt(i) == "A" || string.charAt(i) == "E" || string.charAt(i) == "I" || string.charAt(i) == "O" || string.charAt(i) == "U" )
+                  {count++;}                   
+            }
+        return count;
+        }
+    let string = prompt("Enter String to count voul letter :");
+
+    let voul = countVowel(string);
+
+    alert("The Number of voul letters= "+voul);
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lap2 Calc</title>
+
+<script>
+var shape =prompt("Please Enter shape you want to calc area \n Circle enter c,Triangle enter t,Square enter s,Rectangle enter r,Parallelogram enter p,Trapezium enter tp,Ellipse enter e");
+var area=0;
+const pi=Math.PI;
+switch (shape) {
+     case 'c':
+     var r = Number(prompt("Please Enter The radius"));
+     alert("Circle area= "+(r*r*pi));
+       break;
+    case 't':
+    var b = Number(prompt("Please Enter The base"));
+    var h = Number(prompt("Please Enter The hight"));
+     alert("Triangle area= "+(0.5*b*h));
+       break;
+     case 's':
+     var a = Number(prompt("Please Enter The length of side"));
+     alert("area of square= "+(a*a));
+       break;
+    case 'r':
+    var l = Number(prompt("Please Enter The length"));
+    var w = Number(prompt("Please Enter The width"));
+     alert("Rectangle area= "+(l*w));
+       break;
+       case 'p':
+    var b = Number(prompt("Please Enter The base"));
+    var h = Number(prompt("Please Enter The hight"));
+    alert("Parallelogram area= "+(b*h));
+       break;
+       case 'tp':
+    var a = Number(prompt("Please Enter The length of side a"));
+    var b = Number(prompt("Please Enter The lenght of side b"));
+    var h = Number(prompt("Please Enter The hight"));
+    alert("Trapezium area= "+(0.5(a+b)*h));
+       break;
+       case 'e':
+    var a = Number(prompt("Please Enter The  ½ minor axis"));
+    var b = Number(prompt("Please Enter The  ½ major axis"));
+    alert("Ellipse area= "+((a+b)*pi));
+       break;
+    }
+</script>
+</body>
+</html>

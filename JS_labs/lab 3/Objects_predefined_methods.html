@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Objects predefined methods </title>
+
+<script>
+//creating object
+emp1={id:111,name:"Sondos ",salary:40000}  
+alert("emp1-> "+emp1.id+" "+emp1.name+" "+emp1.salary); //emp1-> 111 Sondos  40000
+//creating empty object
+var emp2={};
+//1.Object.assign() method
+//This method is used to copy properties from a source object to a target object
+//in this example the id,name & salary of emp1 -> emp2 will take a copy of these properties 
+//the target object can be empty or not
+Object.assign(emp2, emp1);
+alert("emp2-> "+emp2.id+" "+emp2.name+" "+emp2.salary); //emp2-> 111 Sondos  40000
+
+//2.Object.values() method
+//it retuns the values "properties" of the object
+alert("values of emp1: "+Object.values(emp1)); //values of emp1: 111,Sondos ,40000
+
+//3.Object.entries() method
+//this method used to return key and its values using the index of it's position in the object in array
+//start index is zero
+alert(Object.entries(emp1)[2]);//salary:40000
+
+//4.Object.freeze() method
+//this method is used to freeze an object that prevents new properties from being added to it.
+Object.freeze(emp1);//then we can't modify anything or add any property of this object
+emp1.id = 444;
+alert("id of emp1-> "+emp1.id);//id of emp1-> 111 "id wasn't changed"
+
+//5.getOwnPropertyDescriptor() method
+//this method helps us to know information about any property in object
+//returns a property descriptor that if the property exist in object or no and its value
+var descriptor1 = Object.getOwnPropertyDescriptor(emp1, 'salary'); 
+alert(descriptor1.enumerable);//returns true if the property exists
+alert(descriptor1.value);//return the value of the property "40000"
+
+//6.getOwnPropertyNames() method
+//this method returns an array of all properties name
+alert(Object.getOwnPropertyNames(emp1)); //output->> id,name,salary
+
+//7.getPrototypeOf() method
+//this method returns the prototype of the specified object.
+let emp3 = Object.create(emp1); 
+alert(Object.getPrototypeOf(emp3) === emp1);
+
+//8.setPrototypeOf() method
+//this method sets the prototype of a specified object to another object
+Object.setPrototypeOf(emp2,emp1);//emp2 become prototype of emp1
+//by comparing with previous method will return true
+alert(Object.getPrototypeOf(emp2) === emp1);//true
+
+//9.isFrozen() method
+//this method determines if an object was frozen
+//in point 4 i made emp1 abject frozen with freeze() method
+//when i check using isFrozen() method it will return true
+alert("emp1 is frozen->> "+Object.isFrozen(emp1));//emp1 is frozen->> true
+
+//10.seal() method
+//this method prevents new properties from being added and marks all existing properties as non-configurable
+emp4={id:444,name:"mrwan ",salary:50000}
+Object.seal(emp4);
+emp4.name = "yahia"; 
+alert(emp4.name); // output: yahia
+delete emp4.name; // Cannot delete when sealed
+alert(emp4.name);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 1</title>
+
+    <script>
+
+        class Shape {
+            constructor(name, sides, sideLength) {
+                this.name = name;
+                this.sides = sides;
+                this.sideLength = sideLength;
+            }
+            calcPerimeter() {
+                let perimeter = this.sides * this.sideLength;
+                console.log(`The perimeter of ${this.name} is: ${perimeter} .`);
+            }
+        }
+        const square = new Shape('Square', 4, 5);
+        square.calcPerimeter();
+        const triangle = new Shape('Triangle', 3, 3);
+        triangle.calcPerimeter();
+
+    </script>
+
+    </body>
+
+</html>

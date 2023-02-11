@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AVG & SUM</title>
+
+<script>
+var sum =0;
+var avg=0;
+var count = Number(prompt("Enter count of number you want to sum. "));
+var arr = new Array();
+for(var i=0;i<count;i++){
+   var enteredNumber = Number(prompt("Enter Number "+(i+1)));
+   arr[i]= enteredNumber;
+   sum = sum + enteredNumber;
+}
+avg=sum/count;
+alert("The numbers that you entered: "+arr);
+alert("The Sum of number= "+sum);
+alert("The Average of number= "+avg);
+
+</script>
+</body>
+</html>

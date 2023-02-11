@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lap2 Calc</title>
+
+<script>
+  function cal(){
+    var firstNumber =Number(prompt("Please Enter Number1"));
+    var operator = prompt("Please Enter The operator");
+    var secondNumber = Number(prompt("Please Enter Number2"));
+
+    if (isNaN(firstNumber) || isNaN(secondNumber)){
+      alert("Invalid input!");
+    }
+if (firstNumber && secondNumber && operator){
+  switch (operator) {
+     case '+':
+     alert("sum= "+(firstNumber+secondNumber));
+       break;
+     case '-':
+     alert("subtract= "+(firstNumber-secondNumber));
+       break;
+    case '*':
+     alert("multi "+(firstNumber*secondNumber));
+       break;
+       case '/':
+     alert("division= "+(firstNumber/secondNumber));
+       break;
+       case '%':
+     alert("moduls= "+(firstNumber%secondNumber));
+       break;
+    }
+}
+else{
+    alert("Invalid input!");
+}
+}
+cal();
+</script>
+</body>
+</html>

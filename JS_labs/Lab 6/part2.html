@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2</title>
+
+    <script>
+
+        class Shape {
+            constructor(name, sides, sideLength) {
+                this.name = name;
+                this.sides = sides;
+                this.sideLength = sideLength;
+            }
+            calcPerimeter() {
+                let perimeter = this.sides * this.sideLength;
+                console.log(`The perimeter of ${this.name} is: ${perimeter} .`);
+            }
+        }
+        class Square extends Shape {
+            constructor(sideLength) {
+                super('Square', 4, sideLength);
+                this.sideLength = sideLength;
+
+            }
+            calcArea() {
+                let area = this.sideLength * this.sideLength;
+                console.log(`The area of ${this.name} is: ${area} .`);
+            }
+        }
+
+        let square1 = new Square(4);
+        square1.calcPerimeter();
+        square1.calcArea();
+
+    </script>
+
+    </body>
+
+</html>

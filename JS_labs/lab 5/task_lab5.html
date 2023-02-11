@@ -1,0 +1,208 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+
+    <script>
+
+        class Person {
+            constructor(fullName, money, sleepMood, healthRate) {
+                this.fullName = fullName;
+                this.money = money;
+                this.sleepMood = sleepMood;
+                this.healthRate = healthRate;
+            }
+            Sleep(hours) {
+                if (hours == 7) {
+                    this.sleepMood = "Happy";
+                } else if (hours < 7) {
+                    this.sleepMood = "Tired";
+                } else if (hours > 7) {
+                    this.sleepMood = "Lazy";
+                }
+                return this.sleepMood;
+            }
+            Eat(meals) {
+                if (meals == 3) {
+                    this.healthRate = "100";
+                } else if (meals == 2) {
+                    this.healthRate = "75";
+                } else if (meals == 1) {
+                    this.healthRate = "50";
+                }
+                return this.healthRate;
+            }
+            Buy(items) {
+                for (let i = 0; i < items; i++) {
+                    this.money -= 10;
+                }
+                return this.money;
+            }
+        }
+
+        class Employee extends Person {
+            #salary;
+            #healthRate;
+            constructor(fullName, money, sleepMood, healthRate, id, email, workMood, salary, isManager) {
+                super(fullName, money, sleepMood, healthRate);
+                this.id = id;
+                this.email = email;
+                this.workMood = workMood;
+                this.#salary = salary;
+                this.#healthRate = healthRate;
+                this.isManager = isManager;
+            }
+            Work(hours) {
+                if (hours == 8) {
+                    this.workMood = "Happy";
+                } else if (hours > 8) {
+                    this.workMood = "Tired";
+                } else if (hours < 8) {
+                    this.workMood = "Lazy";
+                }
+                return this.workMood;
+            }
+            set salary(newSalary) {
+                if (newSalary < 1000) {
+                    throw new RangeError("Invalid Salary value");
+
+                }
+                this.#salary = newSalary;
+            }
+
+            get salary() {
+                return this.#salary;
+            }
+
+            set HealthRate(healthRate) {
+                if (healthRate < 0 || healthRate > 100) {
+                    throw new RangeError("Invalid Health Rate value");
+
+                }
+                this.#healthRate = healthRate;
+            }
+
+            get HealthRate() {
+                return this.#healthRate;
+            }
+
+            get IsManager() {
+                return this.isManager;
+            }
+
+        }
+
+        // let emp = new Employee("Mrwan Ayman", 2000, "Happy", 50, "111", "m@gmail", "Happy", 10000, false);
+        // console.log(emp);
+        // emp.salary = 2000;
+        // console.log(emp.salary);
+
+        class Office {
+            constructor(name, employees) {
+                this.name = name;
+                this.employees = employees;
+            }
+            getAllEmployees() {
+                return this.employees;
+            }
+            getEmployee(empID) {
+                console.log(this.employees.isManager);
+                var employee = 0;
+                for (let i = 0; i < this.employees.length; i++) {
+                    if (this.employees[i].id == empID) {
+                        employee = this.employees[i];
+                        if (this.employees.isManager == 1) {
+                            employee = this.employees[i].fullName + " " + this.employees[i].healthRate;
+                        }
+                    }
+                }
+                return employee;
+            }
+            hire = function (Employee) {
+                console.log("this employee is hired");
+                this.employees.push(Employee);
+                return this.employees;
+            }
+
+            fire = function (empID) {
+                var employees = 0;
+                this.employees.forEach(element => {
+                    if (element.id == empID) {
+                        console.log(element)
+                        var index = this.employees.indexOf(element);
+                        this.employees.splice(index, 1);
+                    }
+                });
+                console.log("this employee is fired");
+                return this.employees;
+            }
+        }
+        let emp1 = new Employee("Sondos", 1000, "Happy", 75, 1, "s@gmail.com", "Happy", 8000, 1);
+        let emp2 = new Employee("Mrwan", 2000, "Happy", 75, 2, "m@gmail.com", "Happy", 10000, 1);
+        let emp3 = new Employee("Sara", 3000, "Happy", 75, 3, "sa@gmail.com", "Happy", 20000, 1);
+        const arr_employees = [];
+        var Office1 = new Office("data", arr_employees);
+        Office1.hire(emp1);
+        Office1.hire(emp2);
+        Office1.hire(emp3);
+        console.log(Office1.getAllEmployees());
+        Office1.fire(2);
+        console.log(Office1.getAllEmployees());
+        var flag = false;
+        while (!flag) {
+            var option = prompt("enter the number of option you want:\n 1-Add new employee \n 2-Delete employee \n 3-Get all current employees \n 4-Get employee");
+            if (option == '1') {
+                let fName = prompt("Enter your fullName");
+                let m = prompt("Enter your money");
+                let sMood = prompt("Enter your sleepMood : happy or tired or lazy");
+                let hRate = prompt("Enter your healthRate :100 or 75 or 50")
+                let iD = prompt("Enter your ID");
+                let em = prompt("Enter your Email");
+                let wMood = prompt("Enter your workMood : happy or tired or lazy");
+                let s = prompt("Enter your salary");
+                let mg = prompt("if you are manger enter 1 else enter  0 ");
+                let newEmp = new Employee(fName, m, sMood, hRate, iD, em, wMood, s, mg);
+                Office1.hire(newEmp);
+                alert("Hirring new employee done successfully");
+                console.log(Office1.getAllEmployees());
+            }
+            else if (option == "2") {
+                let remove = Number(prompt("Enter ID of Employee : "));
+                Office1.fire(remove);
+                alert("Done");
+                console.log(Office1.getAllEmployees());
+            }
+            else if (option == "3") {
+                let allEmp = Office1.getAllEmployees();
+                for (let i = 0; i < allEmp.length; i++) {
+                    alert("Employee number : " + (i + 1) + "\nName: " + allEmp[i].fullName + "\nSleep Mood: " + allEmp[i].sleepMood + "\nHealth Rate: " + allEmp[i].healthRate + "\nID: "
+                        + allEmp[i].id + "\nemail: " + allEmp[i].email + "\nWork Mood: " + allEmp[i].workMood + "\nsalary:" + allEmp[i].salary + "\nIs Manger: " + allEmp[i].isManager + "\n");
+                }
+            }
+            else if (option == "4") {
+                let id = Number(prompt("enter the ID of employee : "));
+                let x = Office1.getEmployee(id);
+                alert("Employee information : \nName: " + x.fullName + "\nSleep Mood: " + x.sleepMood + "\nHealth Rate: " +
+                    x.healthRate + "\nID: " + x.id + "\nemail: " + x.email + "\nWork Mood: " + x.workMood + "\nsalary:" + x.salary + "\nIs Manger: " + x.isManager + "\n");
+            }
+            var answer = prompt("do you want to exit (yes , no)");
+            if (answer == "yes") {
+                flag = true;
+            }
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+    </body>
+
+</html>

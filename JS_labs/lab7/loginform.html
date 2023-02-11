@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login form</title>
+
+</head>
+
+<body>
+    <form action="#">
+        <fieldset id="form">
+            <legend>LOGIN</legend>
+            <div class="form-control">
+                <input type="text" name="name" id="name" autocomplete="off" placeholder="Username" required />
+
+                <br>
+                <br>
+
+                <input type="password" name="password" id="password" autocomplete="off" placeholder="Password"
+                    required />
+
+            </div>
+
+            <br>
+            <br>
+
+            <input type="submit" value="LOGIN" class="submit-btn" id="btn" onclick="login()" />
+        </fieldset>
+    </form>
+    <script>
+        document.body.style.backgroundColor = "#85e085";
+        var form = document.getElementById("form");
+        form.style.backgroundColor = "white";
+        form.style.width = "300px";
+        form.style.height = "300px";
+        form.style.marginTop = "10%";
+        form.style.marginLeft = "35%";
+
+        var btn = document.getElementById("btn");
+        btn.style.backgroundColor = "#00cc44";
+        btn.style.color = "white";
+        btn.style.border = "none";
+        btn.style.width = "250px";
+        btn.style.height = "35px";
+        btn.style.marginLeft = "20px";
+        btn.style.marginTop = "130px";
+
+        var password = document.getElementById("password");
+        password.style.backgroundColor = "#f5f5f0";
+        password.style.border = "none";
+        password.style.height = "35px";
+        password.style.width = "240px";
+        password.style.position = "fixed";
+        password.style.left = "516px";
+        password.style.bottom = "280px";
+        password.style.textAlign = "center";
+
+        var namee = document.getElementById("name");
+        namee.style.backgroundColor = "#f5f5f0";
+        namee.style.border = "none";
+        namee.style.height = "35px";
+        namee.style.width = "240px";
+        namee.style.position = "fixed";
+        namee.style.left = "516px";
+        namee.style.bottom = "330px";
+        namee.style.textAlign = "center";
+
+        function login() {
+            if (namee.value == "admin" && password.value == "123") {
+                alert("Login successfully");
+            }
+            else {
+                alert("not registered");
+            }
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays predefined methods</title>
+
+<script>
+
+//creating array
+const color1 = ["red", "blue", "black"];
+
+//1.at() method 
+//this method takes an integer value and returns the item at that index
+//zero-based index of the array element to be returned
+//negative index counts back from the end of the array
+console.log(color1.at(0));//red
+console.log(color1.at(-1));//black
+
+//2.concat() method
+//this method is used to merge two or more arrays
+//this method does not change the existing arrays but instead returns a new array
+const color2 = ["pink", "white", "yellow"];
+const color3 = color1.concat(color2);
+console.log(color3); //['red', 'blue', 'black', 'pink', 'white', 'yellow']
+
+//3.flat() method
+//this method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth
+//flattening nested arrays
+const arr1 = [1, 2, [3, 4]];
+console.log(arr1.flat());   // [1, 2, 3, 4]
+const arr2 = [1, 2, [3, 4, [5, 6]]];
+console.log(arr2.flat());  // [1, 2, 3, 4, [5, 6]]
+const arr3 = [1, 2, [3, 4, [5, 6]]];
+console.log(arr3.flat(2));   // [1, 2, 3, 4, 5, 6]
+const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+console.log(arr4.flat(Infinity));  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+//4.values() method 
+//this method returns a new array iterator object that iterates the value of each index in the array.
+const iterator = color1.values();
+for (const value of iterator) {
+  console.log(value); //red blue black
+}
+//5.entries() method
+//this method returns a new Array Iterator object that contains the key/value pairs for each index in the array
+const iterator1 = color2.entries();
+console.log(iterator1.next().value);//[0, 'pink']
+console.log(iterator1.next().value);//[1, 'white']
+
+//6.join() method
+//this method creates and returns a new string by concatenating all of the elements in an array
+//separated by commas or a specified separator string
+//if the array has only one item then that item will be returned without using the separator
+console.log(color1.join()); //red,blue,black
+console.log(color1.join(''));//redblueblack
+console.log(color1.join('-'));//red-blue-black
+
+//7.keys() method
+//this method returns a new Array Iterator object that contains the keys for each index in the array
+const iterator2 = color1.keys();
+
+for (const key of iterator2) { 
+     console.log(key);  //0 1 2
+}
+
+//8.reverse() method
+//this method reverses an array in place and returns the reference to the same array reversed
+//elements order in the array will be turned towards the direction opposite to that previously stated
+const array1 = ['one', 'two', 'three'];
+console.log('array1 reversed:', array1.reverse()); //array1 reversed: (3) ['three', 'two', 'one']
+
+//9.sort() method
+//this method sorts the elements of an array in place and returns the reference to the same array
+//The default sort order is ascending
+//converting the elements into strings then comparing their sequences of UTF-16 code units values.
+const array2 = [1, 30, 4, 21, 100000];
+array2.sort();
+console.log(array2);//[1, 100000, 21, 30, 4]
+
+//10.toLocaleString() method
+//this method returns a string representing the elements of the array
+//The elements are converted to Strings using their toLocaleString methods 
+//these Strings are separated by a locale-specific String (such as a comma ",")
+const array3 = [1, 'a', new Date('13 Jan 2023 11:44:00 UTC')];
+const localeString = array3.toLocaleString('en', { timeZone: 'UTC' });
+console.log(localeString); //1,a,1/13/2023, 11:44:00 AM
+
+
+
+
+</script>
+</body>
+</html>

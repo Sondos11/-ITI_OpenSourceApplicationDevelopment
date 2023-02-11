@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+  
+    <script>
+
+//Using Constructor functions
+
+    function Person (fullName,money,sleepMood,healthRate) {
+        this.fullName = fullName;
+        this.money = money;
+        this.sleepMood=sleepMood;
+        this.healthRate=healthRate;
+   }
+    Object.assign(Person.prototype, {
+        Sleep (hours) { 
+            if(hours==7){
+                this.sleepMood="Happy";
+            }else if (hours<7){
+                this.sleepMood="Tired";
+            }else if(hours>7){
+                this.sleepMood="Lazy";
+            }
+            return this.sleepMood;
+         },
+        Eat (meals) { 
+            if(meals==3){
+                this.healthRate="100";
+            }else if(meals==2){
+                this.healthRate="75";
+            }else if(meals==1){
+                this.healthRate="50";
+            }
+            return this.healthRate;
+         },
+        Buy (items) { 
+            for(let i=0;i<items;i++){
+                this.money-=10;
+            } 
+            return this.money;
+         }
+})
+ const sondos = new Person('Sondos Said','100', 'Happy','75');
+ console.log(sondos);
+ console.log(sondos.Sleep(7));
+ console.log(sondos.Eat(2));
+ sondos.Buy(1)
+ console.log(sondos.money);
+
+//Using Classes
+
+    class Person {
+        constructor(fullName,money,sleepMood,healthRate) {
+            this.fullName = fullName;
+            this.money = money;
+            this.sleepMood=sleepMood;
+            this.healthRate=healthRate;
+    }
+    Sleep (hours) { 
+            if(hours==7){
+                this.sleepMood="Happy";
+            }else if (hours<7){
+                this.sleepMood="Tired";
+            }else if(hours>7){
+                this.sleepMood="Lazy";
+            }
+            return this.sleepMood;
+         }
+    Eat (meals) { 
+            if(meals==3){
+                this.healthRate="100";
+            }else if(meals==2){
+                this.healthRate="75";
+            }else if(meals==1){
+                this.healthRate="50";
+            }
+            return this.healthRate;
+         }
+        Buy (items) { 
+            for(let i=0;i<items;i++){
+                this.money-=10;
+            } 
+            return this.money;
+         }
+}
+ const mrwan = new Person('Mrwan Ayman','200', 'Tired','50');
+ console.log(mrwan);
+ console.log(mrwan.Sleep(4));
+ console.log(mrwan.Eat(1));
+ mrwan.Buy(2)
+ console.log(mrwan.money);
+
+// Using Objects Linking to Other Objects (OLOO)
+
+const Person = {
+  init (fullName,money,sleepMood,healthRate) {
+        this.fullName = fullName;
+        this.money = money;
+        this.sleepMood=sleepMood;
+        this.healthRate=healthRate;
+    this.Sleep = function (hours) {
+        if(hours==7){
+                this.sleepMood="Happy";
+            }else if (hours<7){
+                this.sleepMood="Tired";
+            }else if(hours>7){
+                this.sleepMood="Lazy";
+            }
+            return this.sleepMood;
+    }
+    this.Eat = function (meals) {
+        if(meals==3){
+                this.healthRate="100";
+            }else if(meals==2){
+                this.healthRate="75";
+            }else if(meals==1){
+                this.healthRate="50";
+            }
+            return this.healthRate;
+         }
+    this.Buy = function (items) {
+        for(let i=0;i<items;i++){
+                this.money-=10;
+            } 
+            return this.money;
+         }  
+  }
+}
+
+const yahia = Object.create(Person);
+yahia.init('Yahia Said','50', 'Lazy','100');
+console.log(yahia);
+console.log(yahia.Sleep(10));
+console.log(yahia.Eat(3));
+yahia.Buy(3)
+console.log(yahia.money);
+
+//Using Factory functions
+
+function Person (fullName,money,sleepMood,healthRate) {
+  return {
+    fullName,
+    money,
+    sleepMood,
+    healthRate,
+    Sleep (hours) { 
+            if(hours==7){
+                this.sleepMood="Happy";
+            }else if (hours<7){
+                this.sleepMood="Tired";
+            }else if(hours>7){
+                this.sleepMood="Lazy";
+            }
+            return this.sleepMood;
+         },
+    Eat (meals) { 
+            if(meals==3){
+                this.healthRate="100";
+            }else if(meals==2){
+                this.healthRate="75";
+            }else if(meals==1){
+                this.healthRate="50";
+            }
+            return this.healthRate;
+         },
+    Buy (items) { 
+            for(let i=0;i<items;i++){
+                this.money-=10;
+            } 
+            return this.money;
+         }
+    
+  }
+}
+const sara = Person('Sara Hussam','220', 'Lazy','75')
+console.log(sara);
+console.log(sara.Sleep(20));
+console.log(sara.Eat(2));
+sara.Buy(5)
+console.log(sara.money);
+
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Calc bounus </title>
+
+<script>
+
+function cal(firstNumber,operator,secondNumber){
+  flag=false;
+ if (isNaN(firstNumber) || isNaN(secondNumber)){
+      alert("Invalid input!");
+    }
+if (firstNumber && secondNumber && operator){
+  switch (operator) {
+     case '+':
+     result=(firstNumber+secondNumber);
+     alert("sum= "+result);
+       break;
+     case '-':
+     result=(firstNumber-secondNumber);
+     alert("subtract= "+result);
+       break;
+    case '*':
+     result=(firstNumber*secondNumber);
+     alert("multi= "+result);
+       break;
+       case '/':
+     result=(firstNumber/secondNumber);
+     alert("division= "+result);
+       break;
+       case '%':
+     result=(firstNumber%secondNumber);
+     alert("moduls= "+result);
+       break;
+    }
+}
+else{
+    alert("Invalid input!");
+}
+flag=confirm('Do you want to continue?');
+if(flag){
+  firstNumber=result;
+  var operator = prompt("Please Enter The operator");
+  var secondNumber = Number(prompt("Please Enter Number2"));
+  cal(firstNumber,operator,secondNumber);
+}
+  
+}
+var firstNumber =Number(prompt("Please Enter Number1"));
+var operator = prompt("Please Enter The operator");
+var secondNumber = Number(prompt("Please Enter Number2")); 
+cal(firstNumber,operator,secondNumber);
+
+
+
+
+
+
+</script>
+</body>
+</html>
