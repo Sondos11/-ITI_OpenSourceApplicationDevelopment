@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="./jQuery-P.js"></script>
+    <script src="./jquery-ui.min.js"></script>
+
+    <style>
+      .imgDiv {
+        position: fixed;
+        right: 170px;
+        top: 200px;
+        padding: 40px;
+        padding-bottom: 90px;
+        background-color: yellow;
+      }
+      .textimg {
+        position: relative;
+        top: 60px;
+        right: 120px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .blackHole {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 150px;
+        background-color: black;
+        color: white;
+        font-size: 50px;
+        border-radius: 80%;
+      }
+      .texthole {
+        position: relative;
+        bottom: 130px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="imgDiv">
+      <img class="imgg" src="./Capture.PNG" alt="" />
+      <span class="textimg">Drag Me</span>
+    </div>
+
+    <div class="blackHole">
+      <span class="texthole">Black Hole</span>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".imgg").hover(function () {
+          $(this).effect("shake", { times: 1 }, 1000);
+        });
+        $(".imgg").draggable();
+        $(".blackHole ").droppable({
+          drop: function () {
+            $(".imgg").fadeOut();
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

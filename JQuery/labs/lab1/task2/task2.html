@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task Two</title>
+    <style>
+      header {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      ul {
+        list-style: none;
+      }
+      .container li {
+        float: left;
+        width: 32%;
+      }
+
+      .container li:nth-child(2) {
+        margin: 0 2%;
+      }
+
+      .container li h3 {
+        width: 80%;
+        text-align: center;
+        color: #888;
+        font-size: 24px;
+        font-weight: normal;
+        margin-bottom: 10px;
+      }
+
+      .container p {
+        text-align: center;
+        width: 60%;
+        margin: 0 10%;
+        font-size: 14px;
+        color: #888;
+        line-height: 1.4em;
+        display: none;
+      }
+      li > img {
+        margin-left: 5em;
+        width: 50%;
+        height: 10em;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Task_two</header>
+    <section class="container">
+      <ul>
+        <li>
+          <img class="img1" src="./img1.jpg" alt="" />
+          <h3>Flower One</h3>
+          <p class="p1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            officia quaerat molestias id impedit atque voluptate dolor itaque
+            corporis libero nobis, laborum asperiores saepe consequatur
+            distinctio et dolore fugiat corrupti.
+          </p>
+        </li>
+        <li>
+          <img class="img2" src="./img2.jpg" alt="" />
+          <h3>Flower Two</h3>
+          <p class="p2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            nobis vel omnis quod atque dolore pariatur nemo doloribus minima
+            sapiente veritatis maiores voluptatem et esse maxime tempore, eos
+            hic molestiae?
+          </p>
+        </li>
+        <li>
+          <img class="img3" src="./img3.jpg" alt="" />
+          <h3>Flower Three</h3>
+          <p class="p3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
+            asperiores officia quia consequuntur, nemo fuga earum maxime numquam
+            illum assumenda aliquam id placeat eius ullam optio vero itaque
+            velit eligendi!
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"></script>
+    <script>
+      // $("img").on("load", function () {
+      //   $("p").slideUp(0);
+      // });
+
+      // $("img").on("mouseover", function () {
+      //   $(this).siblings("p").slideDown(2000);
+      //   // $("p").slideUp(2000)
+      // });
+
+      // $("img").on("mouseout", function () {
+      //   $("p").slideUp(2000);
+      // });
+
+      $(function () {
+        $(".img1").hover(
+          function () {
+            $(".p1").slideDown(2000);
+          },
+          function () {
+            $(".p1").slideUp(2000);
+          }
+        );
+
+        $(".img2").hover(
+          function () {
+            $(".p2").slideDown(2000);
+          },
+          function () {
+            $(".p2").slideUp(2000);
+          }
+        );
+
+        $(".img3").hover(
+          function () {
+            $(".p3").slideDown(2000);
+          },
+          function () {
+            $(".p3").slideUp(2000);
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
