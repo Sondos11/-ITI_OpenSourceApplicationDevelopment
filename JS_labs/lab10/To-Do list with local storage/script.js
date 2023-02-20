@@ -32,10 +32,10 @@ tasksDiv.addEventListener("click", (e) => {
     e.target.parentElement.remove();
   }
 
-  if (e.target.classList.contains("delAll")) {
-    delAll(window.localStorage.getItem("tasks"));
-    e.target.remove();
-  }
+//   if (e.target.classList.contains("delAll")) {
+//     delAll(window.localStorage.getItem("tasks"));
+//     e.target.remove();
+//   }
 
   // Task Element
   if (e.target.classList.contains("task")) {
@@ -123,7 +123,7 @@ function toggleStatusTaskWith(taskId) {
   addTaskLS(arrayOfTasks);
 }
 
-function delAll(tasks) {
-  tasksDiv.innerHTML = "";
-  window.localStorage.removeItem("tasks");
-}
+// function delAll(tasks) {
+//   tasksDiv.innerHTML = "";
+//   window.localStorage.removeItem("tasks");
+// }
