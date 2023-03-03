@@ -1,0 +1,1 @@
+The result equal 41 The result equal 0.00042517006802721087 The result equal -41 The result equal 2352
