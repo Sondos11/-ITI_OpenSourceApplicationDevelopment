@@ -1,0 +1,14 @@
+{
+  "name": "iti/aws-s3",
+  "description": "form",
+  "license": "MIT",
+  "require": {
+    "endroid/qr-code": "*",
+    "aws/aws-sdk-php": "*"
+  },
+  "autoload": {
+    "files": [
+      "config.php"
+    ]
+  }
+}
