@@ -1,0 +1,41 @@
+/* Style the employee name */
+employees employee name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Style the phone numbers */
+employees employee phones phone[type="home"] {
+  color: blue;
+}
+
+employees employee phones phone[type="work"] {
+  color: green;
+}
+
+employees employee phones phone[type="mobile"] {
+  color: red;
+}
+
+/* Style the addresses */
+employees employee addresses address {
+  margin-bottom: 10px;
+}
+
+employees employee addresses address street,
+employees employee addresses address building_number {
+  font-weight: bold;
+}
+
+employees employee addresses address city {
+  text-transform: uppercase;
+}
+
+employees employee addresses address country {
+  text-transform: capitalize;
+}
+
+/* Style the email */
+employees employee email {
+  color: purple;
+}

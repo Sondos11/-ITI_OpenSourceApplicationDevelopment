@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <location>123 Main St, Anytown, USA</location>
+  <description>A cozy library with a wide selection of books for all ages.</description>
+  <librarian>Sondos Said</librarian>
+  <books>
+    <book>
+      <title>Example Book</title>
+      <isbn>978-3-16-148410-0</isbn>
+      <author>John Smith</author>
+      <preface>This is the preface of the example book.</preface>
+      <parts>
+        <part>
+          <title>Part 1: Introduction</title>
+          <chapters>
+            <chapter>
+              <title>Chapter 1: Getting Started</title>
+              <summary>This chapter introduces the basics of the example book.</summary>
+              <sections>
+                <section>
+                  <paragraph>Welcome to the first section of the example book. This paragraph introduces the content of the book.</paragraph>
+                  <paragraph>In this section, we will discuss the purpose and goals of the example book.</paragraph>
+                </section>
+                <section>
+                  <paragraph>This section delves deeper into the background and history of the example book.</paragraph>
+                  <paragraph>Here, we discuss the origins and inspirations behind the creation of the example book.</paragraph>
+                </section>
+              </sections>
+            </chapter>
+            <chapter>
+              <title>Chapter 2: Advanced Topics</title>
+              <summary>This chapter covers more advanced topics in the example book.</summary>
+              <sections>
+                <section>
+                  <paragraph>In this section, we explore the more complex concepts of the example book.</paragraph>
+                  <paragraph>Here, we provide in-depth explanations and examples to help readers understand the advanced topics.</paragraph>
+                </section>
+                <section>
+                  <paragraph>This section discusses the practical applications of the advanced topics covered in the example book.</paragraph>
+                  <paragraph>Readers will learn how to apply their newfound knowledge in real-life situations.</paragraph>
+                </section>
+              </sections>
+            </chapter>
+          </chapters>
+        </part>
+      </parts>
+    </book>
+  </books>
+</library>
