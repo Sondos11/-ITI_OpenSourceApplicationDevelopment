@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT employees (employee)>
+<!ELEMENT employee (name,phones,addresses,email)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT phones (phone)>
+<!ELEMENT phone (#PCDATA)>
+<!ATTLIST phone type CDATA #REQUIRED>
+<!ELEMENT addresses (address)>
+<!ELEMENT address (country, city, region, buildingNumber, street)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT buildingNumber (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT email (#PCDATA)>

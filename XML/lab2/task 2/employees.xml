@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<employees>
+
+
+  <employee>
+    <name>Sondos</name>
+    <phones>
+      <phone type="home">01276548764</phone>
+    </phones>
+    <addresses>
+      <address>
+        <country>Egypt</country>
+        <city>Alexandria</city>
+        <region>Bitash</region>
+        <buildingNumber>17</buildingNumber>
+        <street>st </street>
+      </address>
+    </addresses>
+    <email>sondso@gmial.com</email>
+  </employee>
+
+
+  <employee>
+    <name>Mrwan</name>
+    <phones>
+      <phone type="home">01287437665</phone>
+    </phones>
+    <addresses>
+      <address>
+        <country>Egypt</country>
+        <city>Alexandria</city>
+        <region>Syouf</region>
+        <buildingNumber>11</buildingNumber>
+        <street>st 5</street>
+      </address>
+    </addresses>
+    <email>mrwan@gmail.com</email>
+  </employee>
+
+  
+
+</employees>

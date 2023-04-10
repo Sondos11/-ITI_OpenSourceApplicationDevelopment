@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM 'employees.dtd'>
+
+<employees>
+  <employee>
+    <name>Sondos</name>
+    <phones>
+      <phone type="home">0127643785</phone>
+    </phones>
+    <addresses>
+      <address>
+        <country>Egypt</country>
+        <city>Alexandria</city>
+        <region>Bitash</region>
+        <buildingNumber>17</buildingNumber>
+        <street>st 8</street>
+      </address>
+    </addresses>
+    <email>Sondos@gmail.com</email>
+  </employee>
+
+</employees>
