@@ -1,0 +1,78 @@
+library {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+  }
+  
+  books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  book {
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 45%;
+    flex-direction: column;
+    border: solid rgb(174, 169, 169);
+    border-bottom: none;
+
+  }
+  
+  title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  author {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+  
+  preface {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  
+  part {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    border: solid rgb(203, 199, 199);
+    border-bottom: none;
+    padding: 10px;
+  }
+  
+  chapter {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    border: solid rgb(200, 197, 197);
+    padding: 10px;
+
+  }
+  
+  section {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    border: solid rgb(205, 203, 203);
+    padding: 10px;
+    
+  }
+  
+  paragraph {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    border: solid rgb(174, 169, 169);
+    padding: 10px;
+   
+  }
