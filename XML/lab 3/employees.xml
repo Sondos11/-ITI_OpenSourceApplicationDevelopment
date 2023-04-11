@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="task2.xsl"?>
+<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///F:/ITI/XML/labs/lab%203/task1.xsd">
+	<employee>
+		<name>Sondos Said</name>
+		<phones>
+			<phone type="home">01245678543</phone>
+			<phone type="work">01045632763</phone>
+		</phones>
+		<addresses>
+			<address>
+				<street>qaada</street>
+				<building_number>7</building_number>
+				<region>Bitash</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+		</addresses>
+		<email>Sondos@gmail.com</email>
+	</employee>
+	<employee>
+		<name>Mrwan Ayman</name>
+		<phones>
+			<phone type="mobile">01265387443</phone>
+			<phone type="work">01265442387</phone>
+		</phones>
+		<addresses>
+			<address>
+				<street>madares</street>
+				<building_number>20</building_number>
+				<region>syouf</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+		</addresses>
+		<email>mrwan@gmail.com</email>
+	</employee>
+</employees>
