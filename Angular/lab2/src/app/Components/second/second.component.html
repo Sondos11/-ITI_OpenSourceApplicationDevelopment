@@ -1,0 +1,27 @@
+<style>
+  input[type="button"] {
+    margin-left: 10px;
+  }
+  img {
+    width: 500px;
+    height: 300px;
+    margin-top: 10px;
+  }
+
+  div {
+    margin-left: 450px;
+  }
+</style>
+<div>
+  <img [src]="imgSrc" />
+  <br />
+  <input
+    style="margin-left: 140px"
+    type="button"
+    value="Next"
+    (click)="next()"
+  />
+  <input type="button" value="Prev" (click)="prev()" />
+  <input type="button" value="Slide" (click)="slide()" />
+  <input type="button" value="Stop" (click)="stop()" />
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="content">
+    <input type="text" id="enter" [(ngModel)]="data" />
+    <button id="clear" (click)="resetData($event)">Reset</button>
+  </div>
+  <p>
+    Output: <span id="result">{{ data }}</span>
+  </p>
+</div>
