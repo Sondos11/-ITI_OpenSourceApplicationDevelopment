@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+    width: 50%;
+    color: darkgrey;
+    background-color: azure;
+    text-align: center;
+    margin: 5px auto;
+    margin-top: 15px;
+    border-bottom: 2px dashed darkgray;
+    border-radius: 20px;
+}
