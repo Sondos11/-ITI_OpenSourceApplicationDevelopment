@@ -1,0 +1,14 @@
+<table class="table text-center w-50 table-striped table-dark table-hover mt-5">
+  <thead>
+    <tr>
+      <th scope="row">Name</th>
+      <th class="pe-5" scope="row">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of Students" routerLink="/students/{{ std.id }}">
+      <td>{{ std.name }}</td>
+      <td class="pe-5">{{ std.age }}</td>
+    </tr>
+  </tbody>
+</table>

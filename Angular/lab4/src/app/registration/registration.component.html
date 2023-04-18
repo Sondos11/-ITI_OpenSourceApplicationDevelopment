@@ -1,0 +1,51 @@
+<form (ngSubmit)="Add()" [formGroup]="validationForm">
+  <div class="m-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Name</label>
+    <textarea
+      class="form-control"
+      id="name"
+      rows="1"
+      formControlName="name"
+    ></textarea>
+  </div>
+  <div *ngIf="!NameValid">
+    <p class="text-danger text-center small mx-auto">
+      name must be more than 3 length
+    </p>
+  </div>
+  <div class="m-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Age</label>
+    <textarea
+      class="form-control"
+      id="age"
+      rows="1"
+      formControlName="age"
+    ></textarea>
+  </div>
+  <div *ngIf="!AgeValid">
+    <p class="text-danger text-center small mx-auto">20 &lt; Age &lt; 40</p>
+  </div>
+  <div class="m-3">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Email address</label
+    >
+    <input
+      type="email"
+      class="form-control"
+      formControlName="email"
+      id="mail"
+      placeholder="name@example.com"
+    />
+    <div *ngIf="!EmailValid" class="text-light">
+      <p class="text-danger text-center">Email must be valid</p>
+    </div>
+    <div class="form-group text-center mt-4">
+      <input
+        class="btn btn-outline-success"
+        id="nm"
+        type="submit"
+        value="Submit"
+      />
+    </div>
+  </div>
+</form>
