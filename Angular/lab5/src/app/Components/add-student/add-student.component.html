@@ -1,0 +1,79 @@
+<form
+  (ngSubmit)="
+    Add(
+      name.value,
+      age.value,
+      email.value,
+      phone.value,
+      website.value,
+      address.value
+    )
+  "
+>
+  <div class="m-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Name</label>
+    <input
+      #name
+      class="form-control"
+      id="name"
+      rows="1"
+      formControlName="name"
+    />
+  </div>
+  <div class="m-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Age</label>
+    <input #age class="form-control" id="age" rows="1" formControlName="age" />
+  </div>
+  <div class="m-3">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Email address</label
+    >
+    <input
+      #email
+      type="email"
+      class="form-control"
+      formControlName="email"
+      id="mail"
+      placeholder="name@example.com"
+    />
+  </div>
+  <div class="m-3">
+    <label for="exampleFormControlInput1" class="form-label">Phone</label>
+    <input
+      #phone
+      class="form-control"
+      id="phone"
+      rows="1"
+      formControlName="phone"
+    />
+  </div>
+
+  <div class="m-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Website</label>
+    <input
+      #website
+      class="form-control"
+      id="name"
+      rows="1"
+      formControlName="website"
+    />
+  </div>
+  <div class="m-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+    <input
+      #address
+      class="form-control"
+      id="name"
+      rows="1"
+      formControlName="address"
+    />
+  </div>
+  <div class="form-group text-center mt-4">
+    <input
+      class="btn btn-outline-success"
+      id="nm"
+      type="submit"
+      value="Submit"
+    />
+  </div>
+</form>

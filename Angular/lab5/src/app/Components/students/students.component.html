@@ -1,0 +1,34 @@
+<div class="container w-75">
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of students">
+        <td>{{ u.id }}</td>
+        <td>{{ u.name }}</td>
+        <td>{{ u.email }}</td>
+        <td>
+          <div class="btn-group">
+            <a class="btn btn-primary me-2" routerLink="/students/{{ u.id }}"
+              >Details</a
+            >
+            <a
+              class="btn btn-success me-2"
+              routerLink="/students/{{ u.id }}/edit"
+              >Update</a
+            >
+            <button class="btn btn-danger" (click)="deleteStudent(u.id)">
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,39 @@
+<ng-container *ngIf="student; else falseBlock">
+  <div class="container w-50 shadow-lg p-3 mt-5 bg-body-tertiary rounded-5">
+    <h4 class="font-weight-bold mb-3">Student Information</h4>
+    <div class="row">
+      <div class="col-md-4"><strong>ID:</strong></div>
+      <div class="col-md-8">{{ student.id }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><strong>Name:</strong></div>
+      <div class="col-md-8">{{ student.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><strong>Age:</strong></div>
+      <div class="col-md-8">{{ student.age }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><strong>Email:</strong></div>
+      <div class="col-md-8">{{ student.email }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><strong>Website:</strong></div>
+      <div class="col-md-8">{{ student.website }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><strong>Address:</strong></div>
+      <div class="col-md-8">{{ student.address }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><strong>Phone:</strong></div>
+      <div class="col-md-8">{{ student.phone }}</div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #falseBlock>
+  <div class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</ng-template>

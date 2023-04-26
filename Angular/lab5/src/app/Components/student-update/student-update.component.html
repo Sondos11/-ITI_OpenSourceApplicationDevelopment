@@ -1,0 +1,80 @@
+<div class="container">
+  <h1 class="text-center">Update Student</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="studentData.name"
+        name="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="age"
+        [(ngModel)]="studentData.age"
+        name="age"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        [(ngModel)]="studentData.email"
+        name="email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone"
+        [(ngModel)]="studentData.phone"
+        name="phone"
+      />
+    </div>
+    <div class="form-group">
+      <label for="website">Website:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="website"
+        [(ngModel)]="studentData.website"
+        name="website"
+      />
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea
+        class="form-control"
+        id="address"
+        [(ngModel)]="studentData.address"
+        name="address"
+      ></textarea>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="
+        UpdateStudent(
+          studentData.name,
+          studentData.age,
+          studentData.email,
+          studentData.phone,
+          studentData.website,
+          studentData.address
+        )
+      "
+    >
+      Update
+    </button>
+  </form>
+</div>
