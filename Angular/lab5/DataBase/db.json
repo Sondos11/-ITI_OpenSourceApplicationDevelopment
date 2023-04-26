@@ -1,0 +1,85 @@
+{
+  "students": [
+    {
+      "name": "Mrwannn",
+      "age": 25,
+      "email": "mrwan@gmail.com",
+      "website": "http://mrwan.com",
+      "address": "alexandria/syouf",
+      "phone": "01256338834",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Mariam",
+      "age": 22,
+      "email": "mariam@gmail.com",
+      "website": "http://mariam.com",
+      "address": "alexandria/sidibeshr",
+      "phone": "01532338834"
+    },
+    {
+      "id": 4,
+      "name": "Nehad",
+      "age": 23,
+      "email": "nehad@gmail.com",
+      "website": "http://nehad.com",
+      "address": "alexandria/45",
+      "phone": "01134555238"
+    },
+    {
+      "id": 5,
+      "name": "Sara",
+      "age": 23,
+      "email": "sara@gmail.com",
+      "website": "http://sara.com",
+      "address": "alexandria/shahr_el_asal",
+      "phone": "01034873229"
+    },
+    {
+      "id": 6,
+      "name": "Yahia",
+      "age": 20,
+      "email": "yahia@gmail.com",
+      "website": "http://yahia.com",
+      "address": "alexandria/bitash",
+      "phone": "01034875969"
+    },
+    {
+      "id": 7,
+      "name": "Wafaa",
+      "age": 21,
+      "email": "wafaa@gmail.com",
+      "website": "http://wafaa.com",
+      "address": "alexandria/dkhela",
+      "phone": "01034874562"
+    },
+    {
+      "id": 8,
+      "name": "Shireen",
+      "age": 42,
+      "email": "shireen@gmail.com",
+      "website": "http://shireen.com",
+      "address": "alexandria/victoria",
+      "phone": "01177374562"
+    },
+    {
+      "name": "Dummy",
+      "age": "55",
+      "email": "Dummy@gmail.com",
+      "website": "website\": \"http://dummycom",
+      "address": "alexandria/loran",
+      "phone": "+201228457817",
+      "id": 9
+    },
+    {
+      "name": "Sondos",
+      "age": "24",
+      "email": "sondos@gmail.com",
+      "website": "http://sondos.com",
+      "address": "alexandria/bitash",
+      "phone": "+201228457817",
+      "id": 10
+    }
+  ]
+}
