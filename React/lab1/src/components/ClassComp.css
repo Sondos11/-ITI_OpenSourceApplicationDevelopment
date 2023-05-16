@@ -1,0 +1,55 @@
+.container {
+    height: 100vh;
+}
+
+input[type='text'] {
+    border: none;
+    height: 30px;
+    border-radius: 2%;
+    width: 250px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgb(245, 245, 245);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+    height: 45vh;
+    border-radius: 2%;
+    margin-top: 200px;
+    padding-top: 20px;
+    background: rgb(245, 245, 245);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+}
+
+input[type='button'] {
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-radius: 9px;
+    background: #f96e43;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: medium;
+    height: fit-content;
+    font-family: 'Times New Roman', Times, serif
+}
+
+input[type='button']:hover {
+    box-shadow: 7px 5px 56px -14px #131212;
+}
+
+input[type='button']:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #131212;
+}
