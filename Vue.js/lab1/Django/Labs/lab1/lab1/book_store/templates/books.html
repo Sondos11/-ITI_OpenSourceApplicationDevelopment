@@ -1,0 +1,48 @@
+{% extends "base_templates.html" %} {% block title %} books list {% endblock %}
+{% block main-content%}
+<a class="btn btn-success" href="{% url 'book_store:book-create' %}"> Create</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">author</th>
+      <th scope="col">description</th>
+      <th scope="col">actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for book in books%}
+    <tr>
+      <th scope="row">{{book.id}}</th>
+      <td>{{book.name}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.description| truncatewords:3|title}}</td>
+      <td>
+        <a
+          class="btn btn-info"
+          href="{% url 'book_store:book-details' book.id %}">
+          View</a
+        >
+        <a
+          class="btn btn-success"
+          href="{% url 'book_store:book-update' book.id %}">
+          Update</a
+        >
+        <a
+          class="btn btn-danger"
+          href="{% url 'book_store:book-delete' book.id %}">
+          Delete</a
+        >
+      </td>
+    </tr>
+
+    {# if list is empty#} {% empty %}
+    <tr>
+      <td colspan="3" class="text-center">sorry, not task in list</td>
+    </tr>
+
+    {%endfor%}
+  </tbody>
+</table>
+{%endblock%}
