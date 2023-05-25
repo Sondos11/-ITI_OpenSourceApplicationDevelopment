@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 3,
+      "first_name": "Sondos",
+      "last_name": "Said",
+      "gender": "Female"
+    },
+    {
+      "first_name": "Mrwan",
+      "last_name": "Ayman",
+      "gender": "Male",
+      "id": 4
+    },
+    {
+      "first_name": "Sara ",
+      "last_name": "Hussam",
+      "gender": "Female",
+      "id": 5
+    }
+  ]
+}
