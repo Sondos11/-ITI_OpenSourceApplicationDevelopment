@@ -1,0 +1,37 @@
+{% extends 'main/base_layout.html' %}
+
+{% block main-content %}
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <td>Title</td>
+        <td>Description</td>
+        <td>Rate</td>
+        <td>Views</td>
+        <td>Actions</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for book in books %}
+
+    <tr>
+        <td>{{book.title}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.rate}}</td>
+        <td>{{book.views}}</td>
+        <td>
+            <a href="{% url 'books:book-detail' book.id %}" class="btn btn-info"> View</a>
+            <a href="{% url 'books:book-update' book.id %}" class="btn btn-warning"> Update</a>
+            <a href="{% url 'books:book-delete' book.id %}" class="btn btn-danger"> Delete</a>
+
+        </td>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}

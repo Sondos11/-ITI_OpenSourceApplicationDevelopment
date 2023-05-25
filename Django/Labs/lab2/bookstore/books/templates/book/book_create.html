@@ -1,0 +1,53 @@
+{% extends 'main/base_layout.html' %}
+{% block main-content %}
+<div class="container">
+    <div class="row">
+        <div class="text-center col-12">
+
+            <form method="post" action="{% url 'books:book-create' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+                {{ form.as_p }}
+
+                {% comment %}
+                <div class="form-group">
+                    <label for="bookName">Title</label>
+                    <input type="text" name="name" class="form-control" id="bookName" placeholder="Enter name">
+                </div>
+
+                <div class="form-group">
+                    <label for="bookDesc"> Description</label>
+                    <input type="text" name="desc" class="form-control" id="bookDesc" placeholder="Enter Description">
+                </div>
+
+                <div class="form-group">
+                    <label for="bookLikes"> Rate</label>
+                    <input type="number" name="likes" class="form-control"
+                           placeholder="Enter Rate">
+                </div>
+
+                <div class="form-group">
+                    <label for="bookLikes"> Views</label>
+                    <input type="number" name="likes" class="form-control""
+                           placeholder="Enter Rate">
+                </div>
+                {% endcomment %}
+
+
+
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="text-center mt-5" style="display:inline">
+                    <a href="{% url 'books:book-index'%}">
+                        <button type="button" class="btn btn-info">
+                            Back to books Index
+                        </button>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}
